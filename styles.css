@@ -6,6 +6,7 @@ body {
     background: #e59e9e00;
     background-size: cover;
     color: #333;
+    background: url('images/R.jpeg') no-repeat center center fixed;
 }
 header {
     background: url('images/Fakery.jpg') no-repeat center center fixed;
