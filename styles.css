@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #e59e9e00;
+    background-size: cover;
+    color: #333;
+}
+header {
+    background: url('images/Fakery.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000ba;
+    padding: 18em 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0.1;
+}
+nav ul {
+    list-style: none;
+    padding: 66;
+}
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+    padding: 669999;
+}
+nav ul li a {
+    color: #0b0909c3;
+    text-decoration: none;
+}
+main {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.intro, .about-us, .projects-list {
+    background: #ffffff4e;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 0 100px rgb(10, 27, 43);
+}
+footer {
+    text-align: center;
+    padding: 2px 0;
+    background: #33333397;
+    color: #000000;
+    position: absolute;
+    bottom: 100;
+    width: 100%;
+}
+.project-item {
+    margin-bottom: 10px;
+}
+.project-item a {
+    color: #096afcd5;
+    text-decoration: none;
+    border: 1px solid #0804e1;
+    padding: 5px 10px;
+    transition: background 0.1s, color 0.3s;
+}
+.project-item a:hover {
+    background: #060606;
+    color: #4a4c51a3;
+}
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    main {
+        padding: 10px;
+    }
+
+    .intro, .about-us, .projects-list {
+        padding: 10px;
+    }
+}
+.intro-image img {
+    margin: 5px;
+    max-width: 30%;
+    height: auto;
+    border-radius: 50%; /* Optional: Add a circular border */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 45%; /* Adjust as needed */
+    border-radius: 50%; /* Rounded image */
+    margin-bottom: 1rem;
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 1rem; /* Add some padding for spacing */
+}
+.intro-image p {
+    font-size: 1rem;
+    color: #333; /* Adjust color as desired */
+    margin: 0;
+}
