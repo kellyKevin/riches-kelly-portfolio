@@ -1,7 +1,7 @@
-**Kelly Kevin & Riches Uche Portfolio Website**
+Kelly Kevin & Riches Uche Portfolio Website
 Welcome to the official portfolio website of Kelly Kevin and Riches Uche. This website showcases our skills, projects, and professional journey. Below, you will find detailed information about the website, including its features, technologies used, and instructions for local setup.
 
-**Table of Contents**
+Table of Contents
 Introduction
 Features
 Technologies Used
@@ -12,16 +12,21 @@ Screenshots
 Contributing
 License
 Contact
-**Introduction**
+Introduction
 The portfolio website of Kelly Kevin and Riches Uche is designed to highlight our technical skills and professional projects. It serves as a digital resume and a showcase of our collaborative and individual accomplishments in web development.
 
-**Features**
+Features
 Responsive Design: The website is fully responsive, ensuring a seamless experience on desktops, tablets, and mobile devices.
+
 Interactive Portfolio: Visitors can explore detailed descriptions and visuals of our projects.
+
 Blog Section: We share technical articles and project updates to provide insights into our work and thought processes.
+
 Contact Form: A simple and efficient way for visitors to get in touch with us.
+
 Enhanced Security: Multi-factor authentication for secure user access.
-**Technologies Used**
+
+Technologies Used
 Front-end:
 
 HTML5
@@ -56,7 +61,7 @@ kelly-riches-portfolio/
 ├── package.json
 ├── README.md
 └── webpack.config.js
-**Setup Instructions**
+Setup Instructions
 To set up the project locally, follow these steps:
 
 Clone the repository:
@@ -80,38 +85,48 @@ Navigate to http://localhost:3000 to view the website.
 
 **Usage**
 Viewing Projects: Navigate to the "Projects" section to see detailed descriptions and visuals of our work.
+
 Reading the Blog: Check out the "Blog" section for technical articles and project updates.
+
 Contacting Us: Use the "Contact" form to send us a message directly through the website.
+
 Screenshots
-**Home Page**
 
-**About Us**
+Home Page
 
-**Projects**
+About Us
 
-**Blog**
+Projects
 
-**Contact**
+Blog
+
+Contact
 
 **Contributing**
 We welcome contributions to enhance our portfolio website. To contribute:
 
-**Fork the repository.**
-Create a new branch: git checkout -b feature/your-feature
-Commit your changes: git commit -m 'Add some feature'
-Push to the branch: git push origin feature/your-feature
-Open a pull request.
-License
+*Fork the repository.*
+
+*Create a new branch:* git checkout -b feature/your-feature
+
+*Commit your changes:* git commit -m 'Add some feature'
+
+*Push to the branch:* git push origin feature/your-feature
+
+*Open a pull request.*
+
+**License**
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 **Contact**
 Feel free to reach out to us through the following channels:
 
-Kelly Kevin
+*Kelly Kevin*
 
 LinkedIn: Kelly Kevin
 GitHub: @kellykevin
-Riches Uche
+
+*Riches Uche*
 
 LinkedIn: Riches Uche
 GitHub: @richesuche
