@@ -1,22 +1,24 @@
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// JavaScript to enhance interactivity
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-
-        window.scrollTo({
-            top: target.offsetTop,
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
 
-// Toggle navigation menu for small screens
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+// Form validation
+document.querySelector('form').addEventListener('submit', function(e) {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show-menu');
+    if (!name || !email || !message) {
+        e.preventDefault();
+        alert('Please fill in all fields');
+    }
 });
 

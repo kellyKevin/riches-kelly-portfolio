@@ -1,11 +1,11 @@
 /* General styles */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #e59e9e00 url('images/R.jpeg') no-repeat center center fixed;
+    background: linear-gradient(to right, rgba(239, 239, 239, 0.8), rgba(255, 255, 255, 0.8)), url('images/R.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
 }
@@ -20,81 +20,169 @@ ul {
 }
 
 a {
-    color: #0b0909c3;
+    color: #1a73e8;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0b57d0;
 }
 
 /* Header styles */
 
 header {
-    background: url('images/Fakery.jpg') no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0.6) url('images/Fakery.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000000ba;
+    color: #fff;
     padding: 2em 0;
     text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     margin-top: 1em;
+    flex-wrap: wrap;
 }
 
 nav ul li {
     margin: 0 20px;
 }
 
+nav ul li a {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 /* Main content styles */
 
 main {
     padding: 40px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.intro, .about-us, .projects-list, .contact-form {
-    background: rgba(255, 255, 255, 0.8);
+.intro, .about-us, .projects-list, .contact-form, .blog-posts {
+    background: rgba(255, 255, 255, 0.9);
     margin: 20px 0;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.intro h2, .about-us h2, .projects-list h2, .contact-form h2 {
+.intro h2, .about-us h2, .projects-list h2, .contact-form h2, .blog-posts h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.intro-image {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .intro-image img {
-    margin: 5px;
-    max-width: 100%;
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 150px;
     height: auto;
-    border-radius: 5px;
 }
 
 .intro-image p {
-    margin: 10px 0;
+    margin: 0;
+    font-size: 1.1em;
 }
 
-.project-item {
+.project-item, .blog-post {
     margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-item h3 {
+.project-item:hover, .blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3, .blog-post h3 {
     margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #1a73e8;
 }
 
-.project-item a {
+.project-item p, .post-content p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.project-item a, .post-content a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #1a73e8;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.project-item a:hover {
-    background-color: #0056b3;
+.project-item a:hover, .post-content a:hover {
+    background-color: #0b57d0;
+}
+
+.blog-post .post-date {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.blog-post .post-content {
+    margin-top: 10px;
+}
+
+/* Contact form styles */
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0b57d0;
 }
 
 /* Footer styles */
@@ -102,7 +190,7 @@ main {
 footer {
     text-align: center;
     padding: 20px 0;
-    background: rgba(51, 51, 51, 0.91);
-    color: #000000;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
 }
 
