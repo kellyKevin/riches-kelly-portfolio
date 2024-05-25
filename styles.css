@@ -1,196 +1,115 @@
-/* General styles */
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, rgba(239, 239, 239, 0.8), rgba(255, 255, 255, 0.8)), url('images/R.jpeg') no-repeat center center fixed;
+    background: url('images/R.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-a {
-    color: #1a73e8;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #0b57d0;
-}
-
-/* Header styles */
-
 header {
-    background: rgba(0, 0, 0, 0.6) url('images/Fakery.jpg') no-repeat center center fixed;
+    background: url('images/Fakery.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
-    padding: 2em 0;
+    color: #000000ba;
+    padding: 18em 0;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 0.2em;
+    margin: 0.1em;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centering the nav items */
 }
 
 nav ul li {
+    display: inline;
     margin: 0 20px;
+    padding: 0;
 }
 
 nav ul li a {
-    font-size: 1.2em;
-    padding: 0.5em 1em;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    transition: background 0.3s;
+    color: #0b0909c3;
+    text-decoration: none;
+    padding: 10px 20px; /* Adding padding to links for better clickability */
 }
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-/* Main content styles */
 
 main {
     padding: 40px;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.intro, .about-us, .projects-list, .contact-form, .blog-posts {
-    background: rgba(255, 255, 255, 0.9);
+.intro, .about-us, .projects-list {
+    background: #ffffff4e;
     margin: 20px 0;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(10, 27, 43, 0.5); /* Adjusted shadow for better aesthetics */
 }
-
-.intro h2, .about-us h2, .projects-list h2, .contact-form h2, .blog-posts h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
-}
-
-.intro-image {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.intro-image img {
-    border-radius: 50%;
-    margin-right: 20px;
-    max-width: 150px;
-    height: auto;
-}
-
-.intro-image p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-.project-item, .blog-post {
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-item:hover, .blog-post:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-item h3, .blog-post h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    color: #1a73e8;
-}
-
-.project-item p, .post-content p {
-    font-size: 1.1em;
-    color: #666;
-}
-
-.project-item a, .post-content a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1a73e8;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.project-item a:hover, .post-content a:hover {
-    background-color: #0b57d0;
-}
-
-.blog-post .post-date {
-    color: #999;
-    font-size: 0.9em;
-}
-
-.blog-post .post-content {
-    margin-top: 10px;
-}
-
-/* Contact form styles */
-
-.contact-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-.contact-form input, .contact-form textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-form button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1a73e8;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #0b57d0;
-}
-
-/* Footer styles */
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
+    padding: 10px 0;
+    background: #33333397;
+    color: #000;
+    position: fixed; /* Fixed positioning to stick to bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+.project-item {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.project-item a {
+    color: #096afcd5;
+    text-decoration: none;
+    border: 1px solid #0804e1;
+    padding: 5px 10px;
+    transition: background 0.1s, color 0.3s;
+}
+
+.project-item a:hover {
+    background: #060606;
+    color: #fff; /* Adjusted hover color for better contrast */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .intro, .about-us, .projects-list {
+        padding: 10px;
+    }
+}
+
+.intro-image img {
+    margin: 5px;
+    max-width: 45%; /* Adjusted as needed */
+    height: auto;
+    border-radius: 50%;
+    display: block; /* Centering the image */
+    margin-left: auto; /* Centering the image */
+    margin-right: auto; /* Centering the image */
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+.intro-image p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center; /* Centering the text */
+    margin: 0.5rem 0 0 0; /* Adding margin for spacing */
 }
 
