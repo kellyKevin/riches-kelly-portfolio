@@ -24,7 +24,8 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Centering the nav items */
+    text-align: center;
+    /* Centering the nav items */
 }
 
 nav ul li {
@@ -36,7 +37,8 @@ nav ul li {
 nav ul li a {
     color: #0b0909c3;
     text-decoration: none;
-    padding: 10px 20px; /* Adding padding to links for better clickability */
+    padding: 10px 20px;
+    /* Adding padding to links for better clickability */
 }
 
 main {
@@ -45,25 +47,36 @@ main {
     margin: 0 auto;
 }
 
-.intro, .about-us, .projects-list {
+.intro,
+.about-us,
+.projects-list {
     background: #ffffff4e;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(10, 27, 43, 0.5); /* Adjusted shadow for better aesthetics */
+    box-shadow: 0 0 10px rgba(10, 27, 43, 0.5);
+    /* Adjusted shadow for better aesthetics */
 }
+
+.links {
+    font-size: 30px;
+    color: #041becc3;
+}
+
 
 footer {
     text-align: center;
     padding: 10px 0;
     background: #33333397;
     color: #000;
-    position: fixed; /* Fixed positioning to stick to bottom */
+    position: fixed;
+    /* Fixed positioning to stick to bottom */
     bottom: 0;
     width: 100%;
 }
 
 .project-item {
-    margin-bottom: 20px; /* Increased margin for better spacing */
+    margin-bottom: 20px;
+    /* Increased margin for better spacing */
 }
 
 .project-item a {
@@ -76,7 +89,8 @@ footer {
 
 .project-item a:hover {
     background: #060606;
-    color: #fff; /* Adjusted hover color for better contrast */
+    color: #fff;
+    /* Adjusted hover color for better contrast */
 }
 
 @media (max-width: 600px) {
@@ -89,19 +103,25 @@ footer {
         padding: 10px;
     }
 
-    .intro, .about-us, .projects-list {
+    .intro,
+    .about-us,
+    .projects-list {
         padding: 10px;
     }
 }
 
 .intro-image img {
     margin: 5px;
-    max-width: 45%; /* Adjusted as needed */
+    max-width: 45%;
+    /* Adjusted as needed */
     height: auto;
     border-radius: 50%;
-    display: block; /* Centering the image */
-    margin-left: auto; /* Centering the image */
-    margin-right: auto; /* Centering the image */
+    display: block;
+    /* Centering the image */
+    margin-left: auto;
+    /* Centering the image */
+    margin-right: auto;
+    /* Centering the image */
     background-color: #f0f0f0;
     padding: 1rem;
 }
@@ -109,6 +129,8 @@ footer {
 .intro-image p {
     font-size: 1rem;
     color: #333;
-    text-align: center; /* Centering the text */
-    margin: 0.5rem 0 0 0; /* Adding margin for spacing */
+    text-align: center;
+    /* Centering the text */
+    margin: 0.5rem 0 0 0;
+    /* Adding margin for spacing */
 }
