@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Include SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
     <header>
+        <!-- SweetAlert Trigger Button -->
+        <button id="showAlert">Special message!</button>
         <h1>About Us</h1>
         <nav>
             <ul>
@@ -27,8 +31,8 @@
             <h2>Our Journey</h2>
             <div class="intro-image">
                 <img src="images/image1 (1).jpg" alt="Kelly">
-                <p><a class="links" href="https://linktr.ee/kellykevinmomanyi" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-solid fa-link"></i></a>
+                <p><a class="links" href="https://linktr.ee/kellykevinmomanyi" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-solid fa-link"></i></a>
                     with Kelly</p>
                 <p>Kelly is a versatile full-stack developer who thrives on solving complex problems. He enjoys diving
                     into back-end logic and building robust APIs. His favorite programming languages include Python and
@@ -69,19 +73,39 @@
                 solve complex problems efficiently.</p>
             <h2>Links</h2>
             <h3>Kelly</h3>
-            <a class="links" href="https://x.com/KellyKe29748136" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-            <a class="links" href="https://www.linkedin.com/in/kelly-kevin-769977287/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-            <a class="links" href="https://github.com/kellyKevin" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <a class="links" href="https://x.com/KellyKe29748136" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+            <a class="links" href="https://www.linkedin.com/in/kelly-kevin-769977287/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="links" href="https://github.com/kellyKevin" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-github"></i></a>
             <h3>Richie</h3>
-            <a class="links" href="https://twitter.com/RichesU77777?t=bokd8p2xLERgGOHYD48hlQ&s=09" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-            <a class="links" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-            <a class="links" href="https://github.com/RichesUR7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <a class="links" href="https://twitter.com/RichesU77777?t=bokd8p2xLERgGOHYD48hlQ&s=09" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="links" href="#" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="links" href="https://github.com/RichesUR7" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-github"></i></a>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Riches & Kelly. All rights reserved.</p>
     </footer>
+    <!-- Include SweetAlert JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts.js"></script>
+    <script>
+        // SweetAlert Welcome Message
+        document.getElementById('showAlert').addEventListener('click', function () {
+            Swal.fire({
+                title: 'Welcome to Our About Page!',
+                text: 'We are thrilled to have you here. Explore our journey and get to know us better.',
+                imageUrl: 'images/back.jpg',
+                confirmButtonText: 'Thank you!',
+                confirmButtonColor: '#3085d6'
+            });
+        });
+    </script>
 </body>
 
 </html>

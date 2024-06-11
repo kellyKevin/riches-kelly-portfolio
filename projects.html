@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects by Riches & Kelly</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -26,7 +28,6 @@
                 <p>Kelly</p>
                 <section class="projects-list">
                     <h2>Project Portfolio</h2>
-                    <!-- List of projects -->
                     <div class="project-item">
                         <h3>Archer Movies/Series Dealership</h3>
                         <div class="container">
@@ -45,7 +46,7 @@
                                 <li><span class="emoji">📱</span> Responsive Design: Optimized for desktops, tablets, and mobiles, ensuring seamless navigation and readability.</li>
                             </ul>
                         </div>
-                        <a href="https://kellykevin.github.io/Kelly/">View </a>
+                        <button class="project-view" data-link="https://kellykevin.github.io/Kelly/">View</button>
                     </div>
                     <!-- Add more projects as needed -->
                 </section>
@@ -55,12 +56,11 @@
                 <p>Riches</p>
                 <section class="projects-list">
                     <h2>Project Portfolio</h2>
-                    <!-- List of projects -->
                     <div class="project-item">
                         <h3>Project Title 1</h3>
                         <p>Description of the project. What problem it solves, the technologies used, and any notable
                             achievements.</p>
-                        <a href="project-link">View </a>
+                        <button class="project-view" data-link="project-link">View</button>
                     </div>
                     <!-- Add more projects as needed -->
                 </section>
@@ -70,7 +70,29 @@
     <footer>
         <p>&copy; 2024 Riches & Kelly. All rights reserved.</p>
     </footer>
+    <!-- Include SweetAlert JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts.js"></script>
+    <script>
+        // Add SweetAlert to Project View buttons
+        document.querySelectorAll('.project-view').forEach(button => {
+            button.addEventListener('click', function () {
+                const projectLink = this.getAttribute('data-link');
+                Swal.fire({
+                    title: 'Project Details',
+                    text: 'You are about to view more details for this project.',
+                    imageUrl: 'images/back.jpg',
+                    showCancelButton: true,
+                    confirmButtonText: 'Proceed',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.open(projectLink, '_blank');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
