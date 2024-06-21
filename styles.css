@@ -149,3 +149,36 @@ footer {
     border-radius: 8px;            /* Rounded corners */
     overflow: hidden;              /* Hide overflow */
 }
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    text-align: center;
+    width: 22%;
+}
+
+.skill i {
+    font-size: 48px;
+    color: #333;
+}
+.project-view {
+    background-color: #3085d6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-view:hover {
+    background-color: #1e70c5;
+}
+.progress {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
