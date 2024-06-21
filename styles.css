@@ -134,3 +134,18 @@ footer {
     margin: 0.5rem 0 0 0;
     /* Adding margin for spacing */
 }
+.iframe-container {
+    display: grid;                 /* Use grid layout */
+    gap: 10px;                     /* Space between the iframes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    justify-items: center;         /* Center items horizontally */
+}
+
+.PFrame {
+    width: 100%;                   /* Full width of grid column */
+    height: 500px;                 /* Fixed height */
+    border: none;                  /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px;            /* Rounded corners */
+    overflow: hidden;              /* Hide overflow */
+}
