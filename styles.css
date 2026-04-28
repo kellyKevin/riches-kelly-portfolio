@@ -1,23 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --accent-color: #3b82f6;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background: url('images/R.jpeg') no-repeat center center fixed;
     background-size: cover;
-    color: #333;
+    color: var(--text-color);
 }
 
 header {
-    background: url('images/Fakery.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/Fakery.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000000ba;
-    padding: 18em 0;
+    color: #fff;
+    padding: 12em 0 8em 0;
     text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 header h1 {
-    margin: 0.1em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0 2rem 0;
+    opacity: 0.9;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: background 0.3s ease;
 }
 
 nav ul {
@@ -25,36 +65,47 @@ nav ul {
     padding: 0;
     margin: 0;
     text-align: center;
-    /* Centering the nav items */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
-    padding: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #0b0909c3;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    /* Adding padding to links for better clickability */
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 main {
-    padding: 40px;
-    max-width: 800px;
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .intro,
 .about-us,
 .projects-list {
-    background: #ffffff4e;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(10, 27, 43, 0.5);
-    /* Adjusted shadow for better aesthetics */
+    background: var(--card-bg);
+    margin: 40px 0;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
 }
 
 .links {
@@ -65,32 +116,42 @@ main {
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #33333397;
-    color: #000;
-    position: fixed;
-    /* Fixed positioning to stick to bottom */
-    bottom: 0;
-    width: 100%;
+    padding: 40px 0;
+    background: #1e293b;
+    color: #fff;
+    margin-top: 60px;
 }
 
 .project-item {
-    margin-bottom: 20px;
-    /* Increased margin for better spacing */
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease;
 }
 
-.project-item a {
-    color: #096afcd5;
-    text-decoration: none;
-    border: 1px solid #0804e1;
-    padding: 5px 10px;
-    transition: background 0.1s, color 0.3s;
+.project-item:hover {
+    transform: translateY(-5px);
 }
 
-.project-item a:hover {
-    background: #060606;
+#showAlert {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
-    /* Adjusted hover color for better contrast */
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#showAlert:hover {
+    background: #fff;
+    color: var(--primary-color);
 }
 
 @media (max-width: 600px) {
@@ -110,71 +171,118 @@ footer {
     }
 }
 
+.intro-image {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+
 .intro-image img {
-    margin: 5px;
-    max-width: 45%;
-    /* Adjusted as needed */
-    height: auto;
+    margin: 20px auto;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 50%;
     display: block;
-    /* Centering the image */
-    margin-left: auto;
-    /* Centering the image */
-    margin-right: auto;
-    /* Centering the image */
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     background-color: #f0f0f0;
-    padding: 1rem;
+    padding: 5px;
 }
 
 .intro-image p {
-    font-size: 1rem;
-    color: #333;
+    font-size: 1.1rem;
+    color: var(--text-color);
     text-align: center;
-    /* Centering the text */
-    margin: 0.5rem 0 0 0;
-    /* Adding margin for spacing */
+    margin: 0.5rem 0;
 }
+
+.team-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.team-grid .intro-image {
+    flex: 1;
+    min-width: 300px;
+}
+
 .iframe-container {
-    display: grid;                 /* Use grid layout */
-    gap: 10px;                     /* Space between the iframes */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    justify-items: center;         /* Center items horizontally */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    margin-top: 40px;
 }
 
 .PFrame {
-    width: 100%;                   /* Full width of grid column */
-    height: 500px;                 /* Fixed height */
-    border: none;                  /* Remove default border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    border-radius: 8px;            /* Rounded corners */
-    overflow: hidden;              /* Hide overflow */
+    width: 100%;
+    height: 500px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
 }
+
 .skills-grid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .skill {
     text-align: center;
-    width: 22%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
 }
 
 .skill i {
     font-size: 48px;
-    color: #333;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.progress-bar-container {
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 4px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: 4px;
 }
 .project-view {
-    background-color: #3085d6;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 28px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    margin-top: 15px;
 }
 
 .project-view:hover {
-    background-color: #1e70c5;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 .progress {
     background-color: #ddd;
