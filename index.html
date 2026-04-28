@@ -12,9 +12,6 @@
 
 <body>
     <header>
-        <!-- SweetAlert Trigger Button -->
-        <button id="showAlert">Welcome!</button>
-        <h1>Riches & Kelly's Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,24 +19,33 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
+        <div class="hero-content">
+            <h1>Riches & Kelly</h1>
+            <p>Full-Stack Developers | ALX Software Engineering Graduates</p>
+            <!-- SweetAlert Trigger Button -->
+            <button id="showAlertIndex">A Special Message</button>
+        </div>
     </header>
     <main>
         <section class="intro">
-            <h2>Welcome to Our Portfolio</h2>
-            <p>We are Riches and Kelly, soon to be graduates of the intense and transformative ALX program. Here, we
-                showcase our unique skills and projects.</p>
-            <div class="intro-image">
-                <img src="images/image1 (1).jpg" alt="Kelly">
-                <p>Kelly</p>
-                <p>Passionate about front-end development and creating delightful user experiences.</p>
-            </div>
-            <div class="intro-image">
-                <img src="images/riches.webp" alt="Riches">
-                <p>Riches</p>
-                <p>Back-end wizard with a love for databases and server-side logic.</p>
+            <h2>Building the Future of Tech</h2>
+            <p>We are a dynamic duo of software engineers from the ALX program, dedicated to crafting seamless digital experiences from front-to-back.</p>
+
+            <div class="team-grid">
+                <div class="intro-image">
+                    <img src="images/image1 (1).jpg" alt="Kelly">
+                    <h3>Kelly Kevin</h3>
+                    <p><strong>Front-End Specialist</strong></p>
+                    <p>Passionate about creating delightful user experiences through clean code and modern design.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="images/riches.webp" alt="Riches">
+                    <h3>Riches</h3>
+                    <p><strong>Back-End Architect</strong></p>
+                    <p>Expert in server-side logic, database optimization, and building robust, scalable systems.</p>
+                </div>
             </div>
         </section>
-
     </main>
     <footer>
         <p>&copy; 2024 Riches & Kelly. All rights reserved.</p>
@@ -47,20 +53,6 @@
     <!-- Include SweetAlert JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts.js"></script>
-    <script>
-        // SweetAlert Welcome Message with Image
-        document.getElementById('showAlert').addEventListener('click', function () {
-            Swal.fire({
-                title: 'Welcome to Our Portfolio!',
-                text: 'Explore our projects and learn more about our journey through the ALX program.',
-                imageUrl: 'images/back.jpg', // Replace with the path to your image
-                imageWidth: 300,
-                imageHeight: 200,
-                imageAlt: 'Welcome Image',
-                confirmButtonText: 'OK'
-            });
-        });
-    </script>
 </body>
 
 </html>
