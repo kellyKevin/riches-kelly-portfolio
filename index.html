@@ -11,7 +11,17 @@
 
     <meta
         name="description"
-        content="Riches & Kelly are software developers building modern digital experiences, web applications, and scalable technology."
+        content="Riches & Kelly — software developers building modern web applications, backend systems, and practical digital experiences."
+    >
+
+    <meta
+        name="keywords"
+        content="Riches & Kelly, software developers, web development, backend engineering, full stack development, software engineering"
+    >
+
+    <meta
+        name="author"
+        content="Riches & Kelly"
     >
 
     <meta
@@ -29,68 +39,114 @@
         content="light dark"
     >
 
-    <link
-        rel="canonical"
-        href="index.html"
+    <meta
+        property="og:type"
+        content="website"
     >
 
-    <title>
-        Riches & Kelly | Software Developers
-    </title>
+    <meta
+        property="og:title"
+        content="Riches & Kelly | Software Developers"
+    >
 
-    <!-- =========================================================
-         APPLICATION STYLES
-         ========================================================= -->
+    <meta
+        property="og:description"
+        content="Software developers building modern interfaces, backend systems, and practical digital experiences."
+    >
 
     <link
         rel="stylesheet"
         href="styles.css"
     >
 
-    <!-- =========================================================
-         SWEETALERT
-         ========================================================= -->
+    <!-- Tailwind CSS utility layer -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: [
+                            "Inter",
+                            "Poppins",
+                            "system-ui",
+                            "sans-serif"
+                        ]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
     >
 
+    <title>Riches & Kelly | Software Developers</title>
 </head>
+
 
 <body>
 
-    <!-- =========================================================
+    <!-- =====================================================
          ACCESSIBILITY
-         ========================================================= -->
+         ===================================================== -->
 
     <a
-        class="skip-link"
         href="#main-content"
+        class="skip-link"
     >
         Skip to main content
     </a>
 
-    <!-- =========================================================
-         HEADER / HERO
-         ========================================================= -->
 
-    <header class="site-header hero-header">
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header
+        class="site-header"
+        data-header
+    >
 
         <div class="header-container">
 
-            <!-- =================================================
-                 PRIMARY NAVIGATION
-                 ================================================= -->
+            <!-- Brand -->
+
+            <a
+                href="index.html"
+                class="site-brand"
+                aria-label="Riches and Kelly home"
+            >
+
+                <span class="brand-mark">
+                    R<span>&</span>K
+                </span>
+
+                <span class="brand-name">
+                    Riches <span>&</span> Kelly
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
 
             <nav
                 class="site-navigation"
+                data-mobile-navigation
                 aria-label="Primary navigation"
             >
 
                 <ul class="navigation-list">
 
-                    <li class="navigation-item">
+                    <li>
                         <a
                             href="index.html"
                             class="navigation-link is-active"
@@ -107,7 +163,7 @@
                         </a>
                     </li>
 
-                    <li class="navigation-item">
+                    <li>
                         <a
                             href="about.html"
                             class="navigation-link"
@@ -123,7 +179,7 @@
                         </a>
                     </li>
 
-                    <li class="navigation-item">
+                    <li>
                         <a
                             href="projects.html"
                             class="navigation-link"
@@ -143,88 +199,142 @@
 
             </nav>
 
-            <!-- =================================================
-                 HERO CONTENT
-                 ================================================= -->
 
-            <div class="hero-content">
+            <!-- Header Controls -->
 
-                <p class="hero-eyebrow">
-                    Software Engineering
-                </p>
+            <div class="header-controls">
 
-                <h1>
-                    Riches
-                    <span class="hero-separator">
-                        &
-                    </span>
-                    Kelly
-                </h1>
+                <!-- Language -->
 
-                <p class="hero-subtitle">
-                    Full-Stack Developers
-                    <span
-                        class="hero-divider"
+                <label
+                    class="language-control"
+                    for="languageSelect"
+                >
+
+                    <i
+                        class="fa-solid fa-language"
                         aria-hidden="true"
-                    >
-                        |
+                    ></i>
+
+                    <span class="sr-only">
+                        Select language
                     </span>
-                    ALX Software Engineering
-                </p>
 
-                <p class="hero-description">
-                    We build thoughtful digital experiences,
-                    practical software, and reliable systems
-                    from the interface to the backend.
-                </p>
-
-                <div class="hero-actions">
-
-                    <a
-                        href="projects.html"
-                        class="button button-primary"
+                    <select
+                        id="languageSelect"
+                        data-language-select
+                        aria-label="Select language"
                     >
-                        <span>
-                            Explore Our Projects
-                        </span>
 
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-                    </a>
+                        <option value="en">
+                            English
+                        </option>
 
-                    <a
-                        href="about.html"
-                        class="button button-secondary"
-                    >
-                        <span>
-                            Meet the Team
-                        </span>
+                        <option value="fr">
+                            Français
+                        </option>
 
-                        <i
-                            class="fa-solid fa-users"
-                            aria-hidden="true"
-                        ></i>
-                    </a>
+                        <option value="es">
+                            Español
+                        </option>
 
-                    <button
-                        type="button"
-                        id="showAlertIndex"
-                        class="button button-ghost"
-                        aria-label="Show a special message"
-                    >
-                        <i
-                            class="fa-solid fa-message"
-                            aria-hidden="true"
-                        ></i>
+                        <option value="de">
+                            Deutsch
+                        </option>
 
-                        <span>
-                            A Special Message
-                        </span>
-                    </button>
+                        <option value="pt">
+                            Português
+                        </option>
 
-                </div>
+                        <option value="it">
+                            Italiano
+                        </option>
+
+                        <option value="nl">
+                            Nederlands
+                        </option>
+
+                        <option value="sw">
+                            Kiswahili
+                        </option>
+
+                        <option value="yo">
+                            Yorùbá
+                        </option>
+
+                        <option value="ig">
+                            Igbo
+                        </option>
+
+                        <option value="ar">
+                            العربية
+                        </option>
+
+                        <option value="zh">
+                            中文
+                        </option>
+
+                        <option value="ja">
+                            日本語
+                        </option>
+
+                        <option value="ko">
+                            한국어
+                        </option>
+
+                        <option value="hi">
+                            हिन्दी
+                        </option>
+
+                        <option value="ru">
+                            Русский
+                        </option>
+
+                        <option value="tr">
+                            Türkçe
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <!-- Theme -->
+
+                <button
+                    type="button"
+                    class="icon-button theme-toggle"
+                    data-theme-toggle
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+
+                    <i
+                        class="fa-solid fa-moon"
+                        data-theme-icon
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    type="button"
+                    class="icon-button menu-toggle"
+                    data-menu-toggle
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                >
+
+                    <i
+                        class="fa-solid fa-bars"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
 
             </div>
 
@@ -232,18 +342,274 @@
 
     </header>
 
-    <!-- =========================================================
-         MAIN CONTENT
-         ========================================================= -->
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
 
     <main id="main-content">
 
-        <!-- =====================================================
-             INTRODUCTION
-             ===================================================== -->
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
         <section
-            class="intro section"
+            class="hero-section"
+            aria-labelledby="hero-heading"
+        >
+
+            <div class="hero-background-grid"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-copy">
+
+                    <p class="hero-status">
+
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        Software Engineering
+
+                    </p>
+
+
+                    <h1
+                        id="hero-heading"
+                        class="hero-title"
+                    >
+
+                        We build
+                        <span class="hero-highlight">
+                            software
+                        </span>
+                        that works.
+
+                    </h1>
+
+
+                    <p class="hero-subtitle">
+
+                        Riches & Kelly are software developers
+                        focused on building useful digital products,
+                        modern interfaces, reliable backend systems,
+                        and scalable applications.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="projects.html"
+                            class="button button-primary"
+                        >
+
+                            <span>
+                                View our work
+                            </span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+
+                        <a
+                            href="about.html"
+                            class="button button-secondary"
+                        >
+
+                            <span>
+                                About us
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Technical identity -->
+
+                    <div class="hero-stack">
+
+                        <span>
+                            <i
+                                class="fa-solid fa-terminal"
+                                aria-hidden="true"
+                            ></i>
+
+                            Engineering
+                        </span>
+
+                        <span>
+                            <i
+                                class="fa-solid fa-server"
+                                aria-hidden="true"
+                            ></i>
+
+                            Backend
+                        </span>
+
+                        <span>
+                            <i
+                                class="fa-solid fa-globe"
+                                aria-hidden="true"
+                            ></i>
+
+                            Web
+                        </span>
+
+                        <span>
+                            <i
+                                class="fa-solid fa-database"
+                                aria-hidden="true"
+                            ></i>
+
+                            Data
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero visual -->
+
+                <div
+                    class="hero-visual"
+                    aria-hidden="true"
+                >
+
+                    <div class="code-window">
+
+                        <div class="code-window-header">
+
+                            <div class="window-controls">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="window-title">
+                                engineering.js
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-window-body">
+
+                            <div>
+                                <span class="code-number">01</span>
+                                <span class="code-keyword">
+                                    const
+                                </span>
+
+                                <span class="code-variable">
+                                    developers
+                                </span>
+
+                                <span>
+                                    =
+                                </span>
+
+                                <span class="code-bracket">
+                                    {
+                                </span>
+                            </div>
+
+                            <div>
+                                <span class="code-number">02</span>
+
+                                <span class="code-property">
+                                    frontend:
+                                </span>
+
+                                <span class="code-string">
+                                    "interfaces"
+                                </span>
+                                ,
+                            </div>
+
+                            <div>
+                                <span class="code-number">03</span>
+
+                                <span class="code-property">
+                                    backend:
+                                </span>
+
+                                <span class="code-string">
+                                    "systems"
+                                </span>
+                                ,
+                            </div>
+
+                            <div>
+                                <span class="code-number">04</span>
+
+                                <span class="code-property">
+                                    data:
+                                </span>
+
+                                <span class="code-string">
+                                    "architecture"
+                                </span>
+                                ,
+                            </div>
+
+                            <div>
+                                <span class="code-number">05</span>
+
+                                <span class="code-property">
+                                    goal:
+                                </span>
+
+                                <span class="code-string">
+                                    "useful software"
+                                </span>
+                            </div>
+
+                            <div>
+                                <span class="code-number">06</span>
+
+                                <span class="code-bracket">
+                                    };
+                                </span>
+                            </div>
+
+                            <div class="code-cursor">
+                                <span class="code-number">
+                                    07
+                                </span>
+
+                                <span>
+                                    _
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTRODUCTION
+             ================================================= -->
+
+        <section
+            class="section"
             aria-labelledby="intro-heading"
         >
 
@@ -256,30 +622,31 @@
                     </p>
 
                     <h2 id="intro-heading">
-                        Building the Future of Tech
+                        From idea to implementation.
                     </h2>
 
                     <p class="section-description">
-                        We are a team of software engineers focused
-                        on creating useful, accessible, and reliable
-                        digital experiences from front to back.
+
+                        We approach software as a complete system.
+                        The interface, application logic, data,
+                        infrastructure, and user experience all
+                        have to work together.
+
                     </p>
 
                 </header>
 
-                <!-- =================================================
-                     TEAM
-                     ================================================= -->
 
                 <div class="team-grid">
 
-                    <!-- =================================================
-                         KELLY
-                         ================================================= -->
 
-                    <article class="team-member">
+                    <!-- Kelly -->
 
-                        <figure class="team-member-image">
+                    <article
+                        class="team-member reveal"
+                    >
+
+                        <div class="team-member-image">
 
                             <img
                                 src="images/image1 (1).jpg"
@@ -290,7 +657,8 @@
                                 decoding="async"
                             >
 
-                        </figure>
+                        </div>
+
 
                         <div class="team-member-content">
 
@@ -303,37 +671,41 @@
                             </h3>
 
                             <p>
-                                Passionate about creating engaging
-                                user experiences through clean code,
-                                thoughtful interfaces, and modern
-                                web technologies.
+
+                                Focused on interfaces, user
+                                experiences, responsive design,
+                                and creating accessible digital
+                                experiences through clean code.
+
                             </p>
+
 
                             <a
                                 href="about.html"
                                 class="text-link"
                             >
-                                <span>
-                                    Learn more about Kelly
-                                </span>
+
+                                Learn more
 
                                 <i
                                     class="fa-solid fa-arrow-right"
                                     aria-hidden="true"
                                 ></i>
+
                             </a>
 
                         </div>
 
                     </article>
 
-                    <!-- =================================================
-                         RICHES
-                         ================================================= -->
 
-                    <article class="team-member">
+                    <!-- Riches -->
 
-                        <figure class="team-member-image">
+                    <article
+                        class="team-member reveal"
+                    >
+
+                        <div class="team-member-image">
 
                             <img
                                 src="images/riches.webp"
@@ -344,12 +716,13 @@
                                 decoding="async"
                             >
 
-                        </figure>
+                        </div>
+
 
                         <div class="team-member-content">
 
                             <p class="person-label">
-                                Back-End Architect
+                                Backend Architect
                             </p>
 
                             <h3>
@@ -357,24 +730,27 @@
                             </h3>
 
                             <p>
-                                Focused on server-side engineering,
-                                database architecture, performance,
-                                and building robust and scalable
-                                software systems.
+
+                                Focused on backend engineering,
+                                databases, application architecture,
+                                performance, and reliable software
+                                systems.
+
                             </p>
+
 
                             <a
                                 href="about.html"
                                 class="text-link"
                             >
-                                <span>
-                                    Learn more about Riches
-                                </span>
+
+                                Learn more
 
                                 <i
                                     class="fa-solid fa-arrow-right"
                                     aria-hidden="true"
                                 ></i>
+
                             </a>
 
                         </div>
@@ -387,12 +763,13 @@
 
         </section>
 
-        <!-- =====================================================
-             WHAT WE BUILD
-             ===================================================== -->
+
+        <!-- =================================================
+             CAPABILITIES
+             ================================================= -->
 
         <section
-            class="capabilities section"
+            class="section section-alt"
             aria-labelledby="capabilities-heading"
         >
 
@@ -401,30 +778,28 @@
                 <header class="section-header">
 
                     <p class="section-eyebrow">
-                        Our capabilities
+                        Engineering capabilities
                     </p>
 
                     <h2 id="capabilities-heading">
-                        From Idea to Implementation
+                        We work across the stack.
                     </h2>
-
-                    <p class="section-description">
-                        We approach software as a complete system,
-                        connecting interface, application logic,
-                        data, and infrastructure.
-                    </p>
 
                 </header>
 
+
                 <div class="capabilities-grid">
 
-                    <article class="capability-card">
+
+                    <article class="capability-card reveal">
 
                         <div class="capability-icon">
+
                             <i
                                 class="fa-solid fa-display"
                                 aria-hidden="true"
                             ></i>
+
                         </div>
 
                         <h3>
@@ -432,19 +807,33 @@
                         </h3>
 
                         <p>
-                            Responsive and accessible interfaces
-                            designed for modern browsers and devices.
+
+                            Responsive interfaces built around
+                            usability, accessibility, performance,
+                            and maintainable frontend architecture.
+
                         </p>
+
+                        <div class="capability-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+
+                        </div>
 
                     </article>
 
-                    <article class="capability-card">
+
+                    <article class="capability-card reveal">
 
                         <div class="capability-icon">
+
                             <i
                                 class="fa-solid fa-server"
                                 aria-hidden="true"
                             ></i>
+
                         </div>
 
                         <h3>
@@ -452,20 +841,33 @@
                         </h3>
 
                         <p>
-                            APIs, application logic, services, and
-                            backend systems designed for reliability
-                            and growth.
+
+                            Application services, APIs, business
+                            logic, authentication, and backend
+                            systems designed for reliability.
+
                         </p>
+
+                        <div class="capability-tags">
+
+                            <span>Python</span>
+                            <span>APIs</span>
+                            <span>Services</span>
+
+                        </div>
 
                     </article>
 
-                    <article class="capability-card">
+
+                    <article class="capability-card reveal">
 
                         <div class="capability-icon">
+
                             <i
                                 class="fa-solid fa-database"
                                 aria-hidden="true"
                             ></i>
+
                         </div>
 
                         <h3>
@@ -473,20 +875,33 @@
                         </h3>
 
                         <p>
-                            Structured data systems and database
-                            solutions designed around application
-                            requirements.
+
+                            Structured data models, database
+                            architecture, queries, relationships,
+                            and application data flows.
+
                         </p>
+
+                        <div class="capability-tags">
+
+                            <span>SQL</span>
+                            <span>PostgreSQL</span>
+                            <span>Data</span>
+
+                        </div>
 
                     </article>
 
-                    <article class="capability-card">
+
+                    <article class="capability-card reveal">
 
                         <div class="capability-icon">
+
                             <i
                                 class="fa-solid fa-layer-group"
                                 aria-hidden="true"
                             ></i>
+
                         </div>
 
                         <h3>
@@ -494,10 +909,20 @@
                         </h3>
 
                         <p>
-                            End-to-end applications that connect
-                            user interfaces, backend services, and
-                            data into one coherent system.
+
+                            Connecting interfaces, services, data,
+                            authentication, and infrastructure into
+                            coherent applications.
+
                         </p>
+
+                        <div class="capability-tags">
+
+                            <span>Architecture</span>
+                            <span>Git</span>
+                            <span>Linux</span>
+
+                        </div>
 
                     </article>
 
@@ -507,46 +932,458 @@
 
         </section>
 
-        <!-- =====================================================
-             PROJECT CTA
-             ===================================================== -->
+
+        <!-- =================================================
+             SELECTED WORK
+             ================================================= -->
 
         <section
-            class="project-cta section"
-            aria-labelledby="project-cta-heading"
+            class="section"
+            aria-labelledby="work-heading"
         >
 
             <div class="container">
 
-                <div class="cta-content">
+                <div class="section-header section-header-inline">
 
-                    <p class="section-eyebrow">
-                        Selected work
-                    </p>
+                    <div>
 
-                    <h2 id="project-cta-heading">
-                        Explore What We've Built
-                    </h2>
+                        <p class="section-eyebrow">
+                            Selected work
+                        </p>
 
-                    <p>
-                        Explore our projects, experiments, and
-                        applications across different areas of
-                        software development.
-                    </p>
+                        <h2 id="work-heading">
+                            Projects built to solve problems.
+                        </h2>
+
+                    </div>
+
 
                     <a
                         href="projects.html"
-                        class="button button-primary"
+                        class="text-link"
                     >
-                        <span>
-                            View Projects
-                        </span>
+
+                        View all projects
 
                         <i
                             class="fa-solid fa-arrow-right"
                             aria-hidden="true"
                         ></i>
+
                     </a>
+
+                </div>
+
+
+                <div class="featured-project-grid">
+
+
+                    <article
+                        class="featured-project reveal"
+                    >
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-category">
+                                Web Application
+                            </p>
+
+                            <h3>
+                                Archer Movies / Series Dealership
+                            </h3>
+
+                            <p>
+
+                                A web experience combining
+                                responsive design, JavaScript
+                                interactivity, recommendation
+                                functionality, and structured data.
+
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Python</span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="projects.html"
+                            class="project-arrow"
+                            aria-label="View Archer Movies project"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="featured-project reveal"
+                    >
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-category">
+                                Web Application
+                            </p>
+
+                            <h3>
+                                Kids Read Verse
+                            </h3>
+
+                            <p>
+
+                                A child-friendly reading experience
+                                featuring synchronized narration,
+                                interactive elements, and responsive
+                                presentation.
+
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Audio API</span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="projects.html"
+                            class="project-arrow"
+                            aria-label="View Kids Read Verse project"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="featured-project reveal"
+                    >
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-category">
+                                E-Commerce
+                            </p>
+
+                            <h3>
+                                Ottawa's Premier Garden Centre
+                            </h3>
+
+                            <p>
+
+                                A responsive marketplace experience
+                                with product presentation, inventory
+                                tracking concepts, and shopping-flow
+                                interactions.
+
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="projects.html"
+                            class="project-arrow"
+                            aria-label="View Garden Centre project"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article
+                        class="featured-project reveal"
+                    >
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+                        <div class="project-content">
+
+                            <p class="project-category">
+                                Web Application
+                            </p>
+
+                            <h3>
+                                Jenkins Kitchen
+                            </h3>
+
+                            <p>
+
+                                A modern kitchen website focused on
+                                clear information architecture,
+                                menu presentation, and a practical
+                                ordering experience.
+
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="projects.html"
+                            class="project-arrow"
+                            aria-label="View Jenkins Kitchen project"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ENGINEERING APPROACH
+             ================================================= -->
+
+        <section
+            class="section section-dark"
+            aria-labelledby="approach-heading"
+        >
+
+            <div class="container">
+
+                <div class="approach-layout">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            Engineering approach
+                        </p>
+
+                        <h2 id="approach-heading">
+                            Good software is more than code.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="approach-list">
+
+                        <article class="approach-item">
+
+                            <span class="approach-index">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Understand the problem
+                                </h3>
+
+                                <p>
+                                    Start with the actual problem,
+                                    users, constraints, and expected
+                                    outcome.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="approach-item">
+
+                            <span class="approach-index">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Design the system
+                                </h3>
+
+                                <p>
+                                    Define the architecture, data
+                                    flow, interfaces, and boundaries
+                                    before implementation.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="approach-item">
+
+                            <span class="approach-index">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Build deliberately
+                                </h3>
+
+                                <p>
+                                    Write maintainable code with
+                                    accessibility, performance,
+                                    security, and reliability in mind.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="approach-item">
+
+                            <span class="approach-index">
+                                04
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Improve continuously
+                                </h3>
+
+                                <p>
+                                    Test, measure, debug, document,
+                                    and improve the system as it grows.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section
+            class="section"
+            aria-labelledby="cta-heading"
+        >
+
+            <div class="container">
+
+                <div class="cta-panel">
+
+                    <div>
+
+                        <p class="section-eyebrow">
+                            Let's build
+                        </p>
+
+                        <h2 id="cta-heading">
+                            Have a problem worth solving?
+                        </h2>
+
+                        <p>
+
+                            Explore our work and learn more about
+                            how we approach software development.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="cta-actions">
+
+                        <a
+                            href="projects.html"
+                            class="button button-primary"
+                        >
+
+                            Explore projects
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                        <a
+                            href="about.html"
+                            class="button button-secondary"
+                        >
+                            Meet the developers
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -556,37 +1393,70 @@
 
     </main>
 
-    <!-- =========================================================
+
+    <!-- =====================================================
          FOOTER
-         ========================================================= -->
+         ===================================================== -->
 
     <footer class="site-footer">
 
-        <div class="container">
+        <div class="container footer-container">
 
-            <p>
-                &copy;
-                <span id="currentYear">
-                    2026
-                </span>
-                Riches & Kelly.
-                <span>
+            <div>
+
+                <a
+                    href="index.html"
+                    class="footer-brand"
+                >
+                    Riches & Kelly
+                </a>
+
+                <p>
+                    Software developers building useful software.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+            </div>
+
+
+            <div class="footer-meta">
+
+                <p>
+                    &copy;
+                    <span id="currentYear">2026</span>
+                    Riches & Kelly.
+                </p>
+
+                <p>
                     All rights reserved.
-                </span>
-            </p>
+                </p>
+
+            </div>
 
         </div>
 
     </footer>
 
-    <!-- =========================================================
-         SCRIPTS
-         ========================================================= -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
-        defer
-    ></script>
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
 
     <script
         src="scripts.js"
