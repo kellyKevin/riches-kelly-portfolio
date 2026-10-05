@@ -11,7 +11,7 @@
 
     <meta
         name="description"
-        content="Explore software development projects created by Riches and Kelly, including web applications, entertainment platforms, educational tools, and business solutions."
+        content="Learn more about Riches and Kelly, their software engineering journey, skills, projects, and professional profiles."
     >
 
     <meta
@@ -29,42 +29,87 @@
         content="light dark"
     >
 
-    <link rel="canonical" href="projects.html">
+    <link rel="canonical" href="about.html">
 
-    <title>Projects by Riches & Kelly</title>
+    <title>About Riches & Kelly</title>
 
-    <!-- =========================================================
-         APPLICATION STYLES
-         ========================================================= -->
+    <!--
+        ============================================================
+        FONTS / ICONS
+        ============================================================
+    -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!--
+        ============================================================
+        APPLICATION STYLES
+        ============================================================
+    -->
 
     <link rel="stylesheet" href="styles.css">
 
-    <!-- =========================================================
-         SWEETALERT
-         ========================================================= -->
+    <!--
+        ============================================================
+        SWEETALERT
+        ============================================================
+    -->
 
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     >
+
+    <!--
+        ============================================================
+        INTERNATIONALIZATION
+        ============================================================
+
+        These attributes give the JavaScript i18n layer a stable
+        structure to work with.
+
+        The language can later be changed dynamically to:
+
+        en
+        fr
+        es
+        de
+        pt
+        ar
+        zh
+        ja
+        ko
+        hi
+        etc.
+
+        The document's `lang` and `dir` attributes should be updated
+        by scripts.js when the user changes language.
+    -->
 </head>
 
 <body>
 
-    <!-- =========================================================
-         ACCESSIBILITY
-         ========================================================= -->
+    <!--
+        ============================================================
+        ACCESSIBILITY
+        ============================================================
+    -->
 
-    <a
-        class="skip-link"
-        href="#main-content"
-    >
+    <a class="skip-link" href="#main-content">
         Skip to main content
     </a>
 
-    <!-- =========================================================
-         SITE HEADER
-         ========================================================= -->
+    <!--
+        ============================================================
+        SITE HEADER
+        ============================================================
+    -->
 
     <header class="site-header">
 
@@ -72,21 +117,38 @@
 
             <div class="header-top">
 
+                <button
+                    type="button"
+                    id="showAlertAbout"
+                    class="alert-button"
+                    aria-label="Show special message"
+                >
+                    <i
+                        class="fa-solid fa-message"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Special message!
+                    </span>
+                </button>
+
                 <h1 class="site-title">
-                    Our Projects
+                    About Us
                 </h1>
 
             </div>
 
-            <!-- =================================================
-                 PRIMARY NAVIGATION
-                 ================================================= -->
+            <!--
+                ====================================================
+                MAIN NAVIGATION
+                ====================================================
+            -->
 
             <nav
                 class="site-navigation"
                 aria-label="Primary navigation"
             >
-
                 <ul class="navigation-list">
 
                     <li class="navigation-item">
@@ -108,7 +170,8 @@
                     <li class="navigation-item">
                         <a
                             href="about.html"
-                            class="navigation-link"
+                            class="navigation-link is-active"
+                            aria-current="page"
                         >
                             <i
                                 class="fa-solid fa-circle-info"
@@ -124,8 +187,7 @@
                     <li class="navigation-item">
                         <a
                             href="projects.html"
-                            class="navigation-link is-active"
-                            aria-current="page"
+                            class="navigation-link"
                         >
                             <i
                                 class="fa-solid fa-code"
@@ -139,26 +201,29 @@
                     </li>
 
                 </ul>
-
             </nav>
 
         </div>
 
     </header>
 
-    <!-- =========================================================
-         MAIN CONTENT
-         ========================================================= -->
+    <!--
+        ============================================================
+        MAIN CONTENT
+        ============================================================
+    -->
 
     <main id="main-content">
 
-        <!-- =====================================================
-             PAGE INTRO
-             ===================================================== -->
+        <!--
+            ========================================================
+            INTRODUCTION
+            ========================================================
+        -->
 
         <section
-            class="projects-hero section"
-            aria-labelledby="projects-heading"
+            class="intro section"
+            aria-labelledby="journey-heading"
         >
 
             <div class="container">
@@ -166,804 +231,833 @@
                 <header class="section-header">
 
                     <p class="section-eyebrow">
-                        Selected work
+                        Our story
                     </p>
 
-                    <h2 id="projects-heading">
-                        Our Projects
+                    <h2 id="journey-heading">
+                        Our Journey
                     </h2>
 
                     <p class="section-description">
-                        A selection of applications, websites, and
-                        software projects built throughout our
-                        development journey.
+                        Two developers, one journey, and a shared
+                        passion for building useful technology.
                     </p>
 
                 </header>
 
-            </div>
+                <div class="people-grid">
 
-        </section>
+                    <!--
+                        ====================================================
+                        KELLY
+                        ====================================================
+                    -->
 
-        <!-- =====================================================
-             PROJECT PORTFOLIOS
-             ===================================================== -->
+                    <article class="person-card">
 
-        <section
-            class="portfolio-section section"
-            aria-label="Developer portfolios"
-        >
+                        <figure class="person-image">
 
-            <div class="container">
+                            <img
+                                src="images/image1 (1).jpg"
+                                alt="Portrait of Kelly"
+                                width="800"
+                                height="800"
+                                loading="lazy"
+                                decoding="async"
+                            >
 
-                <div class="portfolio-grid">
+                        </figure>
 
-                    <!-- =================================================
-                         KELLY
-                         ================================================= -->
+                        <div class="person-content">
 
-                    <article class="developer-portfolio">
+                            <div class="person-heading">
 
-                        <header class="developer-header">
+                                <div>
+                                    <p class="person-label">
+                                        Developer
+                                    </p>
 
-                            <figure class="developer-avatar">
+                                    <h3>
+                                        Kelly
+                                    </h3>
+                                </div>
 
-                                <img
-                                    src="images/image1 (1).jpg"
-                                    alt="Portrait of Kelly Kevin"
-                                    width="800"
-                                    height="800"
-                                    loading="lazy"
-                                    decoding="async"
+                                <a
+                                    class="profile-link"
+                                    href="https://linktr.ee/kellykevinmomanyi"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Visit Kelly's links"
                                 >
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                        aria-hidden="true"
+                                    ></i>
 
-                            </figure>
-
-                            <div>
-
-                                <p class="section-eyebrow">
-                                    Developer portfolio
-                                </p>
-
-                                <h2>
-                                    Kelly Kevin
-                                </h2>
-
-                                <p>
-                                    Selected projects by Kelly.
-                                </p>
+                                    <span>
+                                        Profile
+                                    </span>
+                                </a>
 
                             </div>
 
-                        </header>
+                            <p>
+                                Kelly is a versatile full-stack developer
+                                who thrives on solving complex problems.
+                                He enjoys diving into back-end logic and
+                                building robust APIs.
+                            </p>
 
-                        <div class="projects-list">
+                            <p>
+                                His favorite programming languages include
+                                Python and JavaScript. Kelly's attention
+                                to detail and commitment to clean code
+                                make him a valuable member of any
+                                development team.
+                            </p>
 
-                            <!-- =================================================
-                                 KELLY PROJECT 1
-                                 ================================================= -->
+                            <aside class="fun-fact">
 
-                            <article
-                                class="project-item"
-                                data-project="archer-movies"
-                            >
-
-                                <header class="project-header">
-
-                                    <div class="project-number">
-                                        01
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            Archer Movies / Series
-                                            Dealership
-                                        </h3>
-
-                                        <p class="project-category">
-                                            Entertainment platform
-                                        </p>
-
-                                    </div>
-
-                                </header>
-
-                                <div class="project-content">
-
-                                    <p class="project-description">
-                                        A central hub for entertainment
-                                        enthusiasts, providing movie and
-                                        series information, discovery,
-                                        reviews, and streaming options.
-                                    </p>
-
-                                    <div class="project-details">
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Technologies
-                                            </h4>
-
-                                            <ul class="technologies">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-code"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        HTML, CSS,
-                                                        JavaScript
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-brands fa-python"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Python for
-                                                        recommendations
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-database"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Film metadata
-                                                        storage
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Highlights
-                                            </h4>
-
-                                            <ul class="achievements">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-star"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Preference-based
-                                                        recommendations
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-film"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Comprehensive movie
-                                                        information
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-mobile-screen"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Responsive interface
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
+                                <div class="fun-fact-icon">
+                                    <i
+                                        class="fa-solid fa-lightbulb"
+                                        aria-hidden="true"
+                                    ></i>
                                 </div>
 
-                                <footer class="project-footer">
+                                <div>
+                                    <h4>
+                                        Fun fact
+                                    </h4>
 
-                                    <button
-                                        type="button"
-                                        class="project-view"
-                                        data-link="https://kellykevin.github.io/Kelly/"
-                                        aria-label="View Archer Movies and Series project"
-                                    >
-                                        <span>
-                                            View Project
-                                        </span>
-
-                                        <i
-                                            class="fa-solid fa-arrow-up-right-from-square"
-                                            aria-hidden="true"
-                                        ></i>
-                                    </button>
-
-                                </footer>
-
-                            </article>
-
-                            <!-- =================================================
-                                 KELLY PROJECT 2
-                                 ================================================= -->
-
-                            <article
-                                class="project-item"
-                                data-project="ottawa-garden-centre"
-                            >
-
-                                <header class="project-header">
-
-                                    <div class="project-number">
-                                        02
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            Ottawa's Premier Garden
-                                            Centre
-                                        </h3>
-
-                                        <p class="project-category">
-                                            E-commerce platform
-                                        </p>
-
-                                    </div>
-
-                                </header>
-
-                                <div class="project-content">
-
-                                    <p class="project-description">
-                                        An e-commerce platform focused
-                                        on seedling sales, connecting
-                                        farmers and customers with
-                                        quality planting materials.
+                                    <p>
+                                        Kelly once wrote a Python script
+                                        that automatically organizes files
+                                        based on their content and file
+                                        type.
                                     </p>
-
-                                    <div class="project-details">
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Technologies
-                                            </h4>
-
-                                            <ul class="technologies">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-code"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        HTML, CSS,
-                                                        JavaScript
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-cart-shopping"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Shopping cart
-                                                        system
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-database"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        MySQL inventory
-                                                        management
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Highlights
-                                            </h4>
-
-                                            <ul class="achievements">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-seedling"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Inventory tracking
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-store"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Streamlined
-                                                        marketplace flow
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-mobile-screen"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Mobile-friendly
-                                                        ordering
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
                                 </div>
 
-                                <footer class="project-footer">
-
-                                    <button
-                                        type="button"
-                                        class="project-view"
-                                        data-link="https://kellykevin.github.io/seedlingsweb/"
-                                        aria-label="View Ottawa's Premier Garden Centre project"
-                                    >
-                                        <span>
-                                            View Project
-                                        </span>
-
-                                        <i
-                                            class="fa-solid fa-arrow-up-right-from-square"
-                                            aria-hidden="true"
-                                        ></i>
-                                    </button>
-
-                                </footer>
-
-                            </article>
+                            </aside>
 
                         </div>
 
                     </article>
 
-                    <!-- =================================================
-                         RICHES
-                         ================================================= -->
+                    <!--
+                        ====================================================
+                        RICHES
+                        ====================================================
+                    -->
 
-                    <article class="developer-portfolio">
+                    <article class="person-card">
 
-                        <header class="developer-header">
+                        <figure class="person-image">
 
-                            <figure class="developer-avatar">
+                            <img
+                                src="images/riches.webp"
+                                alt="Portrait of Riches"
+                                width="800"
+                                height="800"
+                                loading="lazy"
+                                decoding="async"
+                            >
 
-                                <img
-                                    src="images/riches.webp"
-                                    alt="Portrait of Riches"
-                                    width="800"
-                                    height="800"
-                                    loading="lazy"
-                                    decoding="async"
+                        </figure>
+
+                        <div class="person-content">
+
+                            <div class="person-heading">
+
+                                <div>
+                                    <p class="person-label">
+                                        Developer
+                                    </p>
+
+                                    <h3>
+                                        Riches
+                                    </h3>
+                                </div>
+
+                                <a
+                                    class="profile-link"
+                                    href="https://linktr.ee/riches7"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Visit Riches' links"
                                 >
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square"
+                                        aria-hidden="true"
+                                    ></i>
 
-                            </figure>
-
-                            <div>
-
-                                <p class="section-eyebrow">
-                                    Developer portfolio
-                                </p>
-
-                                <h2>
-                                    Riches
-                                </h2>
-
-                                <p>
-                                    Selected projects by Riches.
-                                </p>
+                                    <span>
+                                        Profile
+                                    </span>
+                                </a>
 
                             </div>
 
-                        </header>
+                            <p>
+                                Riches is a full-stack developer known
+                                for combining artistic vision with
+                                technical problem-solving.
+                            </p>
 
-                        <div class="projects-list">
+                            <p>
+                                His interests span intuitive interfaces,
+                                scalable backend systems, software
+                                architecture, performance, and resilient
+                                engineering.
+                            </p>
 
-                            <!-- =================================================
-                                 RICHES PROJECT 1
-                                 ================================================= -->
+                            <p>
+                                He approaches difficult engineering
+                                challenges with an emphasis on structure,
+                                maintainability, and long-term scalability.
+                            </p>
 
-                            <article
-                                class="project-item"
-                                data-project="kids-read-verse"
-                            >
+                            <aside class="fun-fact">
 
-                                <header class="project-header">
-
-                                    <div class="project-number">
-                                        01
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            Kids Read Verse
-                                        </h3>
-
-                                        <p class="project-category">
-                                            Educational web application
-                                        </p>
-
-                                    </div>
-
-                                </header>
-
-                                <div class="project-content">
-
-                                    <p class="project-description">
-                                        An interactive reading application
-                                        for children featuring audio
-                                        narration and personalized
-                                        accounts designed to make reading
-                                        engaging.
-                                    </p>
-
-                                    <div class="project-details">
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Technologies
-                                            </h4>
-
-                                            <ul class="technologies">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-code"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        HTML, CSS,
-                                                        JavaScript
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-gears"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        JavaScript
-                                                        application logic
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-volume-high"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Web Audio API
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Highlights
-                                            </h4>
-
-                                            <ul class="achievements">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-microphone"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Synchronized
-                                                        narration
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-palette"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Child-friendly
-                                                        interface
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-mobile-screen"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Mobile optimized
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
+                                <div class="fun-fact-icon">
+                                    <i
+                                        class="fa-solid fa-lightbulb"
+                                        aria-hidden="true"
+                                    ></i>
                                 </div>
 
-                                <footer class="project-footer">
+                                <div>
+                                    <h4>
+                                        Fun fact
+                                    </h4>
 
-                                    <button
-                                        type="button"
-                                        class="project-view"
-                                        data-link="https://github.com/RichesUR7/kids_read_verse"
-                                        aria-label="View Kids Read Verse project"
-                                    >
-                                        <span>
-                                            View Project
-                                        </span>
-
-                                        <i
-                                            class="fa-solid fa-arrow-up-right-from-square"
-                                            aria-hidden="true"
-                                        ></i>
-                                    </button>
-
-                                </footer>
-
-                            </article>
-
-                            <!-- =================================================
-                                 RICHES PROJECT 2
-                                 ================================================= -->
-
-                            <article
-                                class="project-item"
-                                data-project="jenkins-kitchen"
-                            >
-
-                                <header class="project-header">
-
-                                    <div class="project-number">
-                                        02
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            Jenkins Kitchen
-                                        </h3>
-
-                                        <p class="project-category">
-                                            Restaurant web application
-                                        </p>
-
-                                    </div>
-
-                                </header>
-
-                                <div class="project-content">
-
-                                    <p class="project-description">
-                                        A professional restaurant website
-                                        designed around menu discovery
-                                        and a streamlined online ordering
-                                        experience.
+                                    <p>
+                                        Riches once developed an advanced
+                                        chatbot using Python and C,
+                                        combining different programming
+                                        paradigms in one project.
                                     </p>
-
-                                    <div class="project-details">
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Technologies
-                                            </h4>
-
-                                            <ul class="technologies">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-code"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        HTML5, CSS3,
-                                                        JavaScript
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-utensils"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Dynamic menu
-                                                        presentation
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-cart-shopping"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Customer order
-                                                        interface
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="project-detail">
-
-                                            <h4>
-                                                Highlights
-                                            </h4>
-
-                                            <ul class="achievements">
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-wand-magic-sparkles"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Modern visual
-                                                        presentation
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-rocket"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Performance-focused
-                                                        loading
-                                                    </span>
-                                                </li>
-
-                                                <li>
-                                                    <i
-                                                        class="fa-solid fa-route"
-                                                        aria-hidden="true"
-                                                    ></i>
-
-                                                    <span>
-                                                        Streamlined customer
-                                                        journey
-                                                    </span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </div>
-
                                 </div>
 
-                                <footer class="project-footer">
-
-                                    <button
-                                        type="button"
-                                        class="project-view"
-                                        data-link="https://github.com/RichesUR7/Jenkins_kitchen"
-                                        aria-label="View Jenkins Kitchen project"
-                                    >
-                                        <span>
-                                            View Project
-                                        </span>
-
-                                        <i
-                                            class="fa-solid fa-arrow-up-right-from-square"
-                                            aria-hidden="true"
-                                        ></i>
-
-                                    </button>
-
-                                </footer>
-
-                            </article>
+                            </aside>
 
                         </div>
 
-                        <!-- =================================================
-                             RICHES GITHUB
-                             ================================================= -->
+                    </article>
 
-                        <section
-                            class="github-section"
-                            aria-labelledby="riches-github-heading"
-                        >
+                </div>
 
-                            <header class="github-heading">
+            </div>
 
-                                <h3 id="riches-github-heading">
-                                    GitHub Activity
+        </section>
+
+        <!--
+            ========================================================
+            ABOUT US
+            ========================================================
+        -->
+
+        <section
+            class="about-us section"
+            aria-labelledby="about-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        Background
+                    </p>
+
+                    <h2 id="about-heading">
+                        About Us
+                    </h2>
+
+                </header>
+
+                <div class="about-content">
+
+                    <p>
+                        Riches and Kelly are part of the ALX program,
+                        an intensive training environment that has
+                        helped develop their software engineering
+                        foundations.
+                    </p>
+
+                    <p>
+                        Their journey has involved challenging projects,
+                        continuous learning, critical thinking, and
+                        practical problem-solving.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--
+            ========================================================
+            SOCIAL LINKS
+            ========================================================
+        -->
+
+        <section
+            class="social-section section"
+            aria-labelledby="social-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        Connect
+                    </p>
+
+                    <h2 id="social-heading">
+                        Find Us Online
+                    </h2>
+
+                </header>
+
+                <div class="social-grid">
+
+                    <!-- Kelly -->
+
+                    <article class="social-profile">
+
+                        <h3>
+                            Kelly
+                        </h3>
+
+                        <div class="social-links">
+
+                            <a
+                                class="social-link"
+                                href="https://x.com/KellyKe29748136"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Kelly on X"
+                            >
+                                <i
+                                    class="fa-brands fa-x-twitter"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    X
+                                </span>
+                            </a>
+
+                            <a
+                                class="social-link"
+                                href="https://www.linkedin.com/in/kelly-kevin-769977287/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Kelly on LinkedIn"
+                            >
+                                <i
+                                    class="fa-brands fa-linkedin"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    LinkedIn
+                                </span>
+                            </a>
+
+                            <a
+                                class="social-link"
+                                href="https://github.com/kellyKevin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Kelly on GitHub"
+                            >
+                                <i
+                                    class="fa-brands fa-github"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    GitHub
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Riches -->
+
+                    <article class="social-profile">
+
+                        <h3>
+                            Riches
+                        </h3>
+
+                        <div class="social-links">
+
+                            <a
+                                class="social-link"
+                                href="https://twitter.com/RichesU77777?t=bokd8p2xLERgGOHYD48hlQ&s=09"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Riches on X"
+                            >
+                                <i
+                                    class="fa-brands fa-x-twitter"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    X
+                                </span>
+                            </a>
+
+                            <!--
+                                LinkedIn URL was not supplied in the
+                                original page, so the placeholder
+                                link has intentionally been removed.
+                            -->
+
+                            <a
+                                class="social-link"
+                                href="https://github.com/RichesUR7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Riches on GitHub"
+                            >
+                                <i
+                                    class="fa-brands fa-github"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    GitHub
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--
+            ========================================================
+            SKILLS
+            ========================================================
+        -->
+
+        <section
+            id="skills"
+            class="skills section"
+            aria-labelledby="skills-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        Capabilities
+                    </p>
+
+                    <h2 id="skills-heading">
+                        Skills & Expertise
+                    </h2>
+
+                    <p class="section-description">
+                        Technologies and areas of software development
+                        represented across our work.
+                    </p>
+
+                </header>
+
+                <div class="skills-grid">
+
+                    <!-- JavaScript -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-brands fa-js"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    JavaScript
                                 </h3>
 
-                            </header>
-
-                            <div class="iframe-grid">
-
-                                <iframe
-                                    class="profile-frame"
-                                    title="Riches' GitHub profile"
-                                    src="https://git-hub-widgets.vercel.app/profile.html?username=RichesUR7"
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                ></iframe>
+                                <span
+                                    class="skill-level"
+                                    aria-label="JavaScript proficiency: 90 percent"
+                                >
+                                    90%
+                                </span>
 
                             </div>
 
-                        </section>
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="90"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="JavaScript proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="90"
+                                ></div>
+                            </div>
+
+                            <p>
+                                Modern JavaScript development, including
+                                frameworks such as React and Vue.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Python -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-brands fa-python"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    Python
+                                </h3>
+
+                                <span
+                                    class="skill-level"
+                                    aria-label="Python proficiency: 85 percent"
+                                >
+                                    85%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="85"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="Python proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="85"
+                                ></div>
+                            </div>
+
+                            <p>
+                                Application development and backend
+                                engineering with Python.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Databases -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-solid fa-database"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    Databases
+                                </h3>
+
+                                <span
+                                    class="skill-level"
+                                    aria-label="Database proficiency: 80 percent"
+                                >
+                                    80%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="80"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="Database proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="80"
+                                ></div>
+                            </div>
+
+                            <p>
+                                SQL and NoSQL database design,
+                                management, and application integration.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Cloud -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-solid fa-cloud"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    Cloud Computing
+                                </h3>
+
+                                <span
+                                    class="skill-level"
+                                    aria-label="Cloud computing proficiency: 75 percent"
+                                >
+                                    75%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="Cloud computing proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="75"
+                                ></div>
+                            </div>
+
+                            <p>
+                                Cloud deployment and infrastructure
+                                concepts across platforms such as AWS
+                                and Azure.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Web Development -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-solid fa-code"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    Web Development
+                                </h3>
+
+                                <span
+                                    class="skill-level"
+                                    aria-label="Web development proficiency: 95 percent"
+                                >
+                                    95%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="95"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="Web development proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="95"
+                                ></div>
+                            </div>
+
+                            <p>
+                                Building responsive websites and
+                                interfaces using HTML, CSS, and
+                                JavaScript.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Backend -->
+
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            <i
+                                class="fa-solid fa-server"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <div class="skill-content">
+
+                            <div class="skill-heading">
+
+                                <h3>
+                                    Backend Development
+                                </h3>
+
+                                <span
+                                    class="skill-level"
+                                    aria-label="Backend development proficiency: 85 percent"
+                                >
+                                    85%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="progress-bar-container"
+                                role="progressbar"
+                                aria-valuenow="85"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-label="Backend development proficiency"
+                            >
+                                <div
+                                    class="progress-bar"
+                                    data-progress="85"
+                                ></div>
+                            </div>
+
+                            <p>
+                                Server-side development and API
+                                engineering using technologies such
+                                as Node.js and Express.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--
+            ========================================================
+            GITHUB PROFILES
+            ========================================================
+        -->
+
+        <section
+            class="github-section section"
+            aria-labelledby="github-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        Open source
+                    </p>
+
+                    <h2 id="github-heading">
+                        GitHub Profiles
+                    </h2>
+
+                    <p class="section-description">
+                        Explore our public development activity and
+                        repositories.
+                    </p>
+
+                </header>
+
+                <div class="github-grid">
+
+                    <article class="github-card">
+
+                        <h3>
+                            Kelly
+                        </h3>
+
+                        <iframe
+                            class="profile-frame"
+                            title="Kelly's GitHub profile"
+                            src="https://git-hub-widgets.vercel.app/profile.html?username=kellykevin"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+
+                    </article>
+
+                    <article class="github-card">
+
+                        <h3>
+                            Riches
+                        </h3>
+
+                        <iframe
+                            class="profile-frame"
+                            title="Riches' GitHub profile"
+                            src="https://git-hub-widgets.vercel.app/profile.html?username=RichesUR7"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
 
                     </article>
 
@@ -975,9 +1069,11 @@
 
     </main>
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
+    <!--
+        ============================================================
+        FOOTER
+        ============================================================
+    -->
 
     <footer class="site-footer">
 
@@ -998,9 +1094,11 @@
 
     </footer>
 
-    <!-- =========================================================
-         SCRIPTS
-         ========================================================= -->
+    <!--
+        ============================================================
+        SCRIPTS
+        ============================================================
+    -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
