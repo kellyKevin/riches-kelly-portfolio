@@ -1,58 +1,598 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riches & Kelly Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Include SweetAlert CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Riches & Kelly are software developers building modern digital experiences, web applications, and scalable technology."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <meta
+        name="color-scheme"
+        content="light dark"
+    >
+
+    <link
+        rel="canonical"
+        href="index.html"
+    >
+
+    <title>
+        Riches & Kelly | Software Developers
+    </title>
+
+    <!-- =========================================================
+         APPLICATION STYLES
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    <!-- =========================================================
+         SWEETALERT
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    >
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Riches & Kelly</h1>
-            <p>Full-Stack Developers | ALX Software Engineering Graduates</p>
-            <!-- SweetAlert Trigger Button -->
-            <button id="showAlertIndex">A Special Message</button>
-        </div>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Building the Future of Tech</h2>
-            <p>We are a dynamic duo of software engineers from the ALX program, dedicated to crafting seamless digital experiences from front-to-back.</p>
 
-            <div class="team-grid">
-                <div class="intro-image">
-                    <img src="images/image1 (1).jpg" alt="Kelly">
-                    <h3>Kelly Kevin</h3>
-                    <p><strong>Front-End Specialist</strong></p>
-                    <p>Passionate about creating delightful user experiences through clean code and modern design.</p>
+    <!-- =========================================================
+         ACCESSIBILITY
+         ========================================================= -->
+
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
+
+    <!-- =========================================================
+         HEADER / HERO
+         ========================================================= -->
+
+    <header class="site-header hero-header">
+
+        <div class="header-container">
+
+            <!-- =================================================
+                 PRIMARY NAVIGATION
+                 ================================================= -->
+
+            <nav
+                class="site-navigation"
+                aria-label="Primary navigation"
+            >
+
+                <ul class="navigation-list">
+
+                    <li class="navigation-item">
+                        <a
+                            href="index.html"
+                            class="navigation-link is-active"
+                            aria-current="page"
+                        >
+                            <i
+                                class="fa-solid fa-house"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Home
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="navigation-item">
+                        <a
+                            href="about.html"
+                            class="navigation-link"
+                        >
+                            <i
+                                class="fa-solid fa-circle-info"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                About
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="navigation-item">
+                        <a
+                            href="projects.html"
+                            class="navigation-link"
+                        >
+                            <i
+                                class="fa-solid fa-code"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Projects
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- =================================================
+                 HERO CONTENT
+                 ================================================= -->
+
+            <div class="hero-content">
+
+                <p class="hero-eyebrow">
+                    Software Engineering
+                </p>
+
+                <h1>
+                    Riches
+                    <span class="hero-separator">
+                        &
+                    </span>
+                    Kelly
+                </h1>
+
+                <p class="hero-subtitle">
+                    Full-Stack Developers
+                    <span
+                        class="hero-divider"
+                        aria-hidden="true"
+                    >
+                        |
+                    </span>
+                    ALX Software Engineering
+                </p>
+
+                <p class="hero-description">
+                    We build thoughtful digital experiences,
+                    practical software, and reliable systems
+                    from the interface to the backend.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="projects.html"
+                        class="button button-primary"
+                    >
+                        <span>
+                            Explore Our Projects
+                        </span>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+                    <a
+                        href="about.html"
+                        class="button button-secondary"
+                    >
+                        <span>
+                            Meet the Team
+                        </span>
+
+                        <i
+                            class="fa-solid fa-users"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+                    <button
+                        type="button"
+                        id="showAlertIndex"
+                        class="button button-ghost"
+                        aria-label="Show a special message"
+                    >
+                        <i
+                            class="fa-solid fa-message"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            A Special Message
+                        </span>
+                    </button>
+
                 </div>
-                <div class="intro-image">
-                    <img src="images/riches.webp" alt="Riches">
-                    <h3>Riches</h3>
-                    <p><strong>Back-End Architect</strong></p>
-                    <p>Expert in server-side logic, database optimization, and building robust, scalable systems.</p>
-                </div>
+
             </div>
+
+        </div>
+
+    </header>
+
+    <!-- =========================================================
+         MAIN CONTENT
+         ========================================================= -->
+
+    <main id="main-content">
+
+        <!-- =====================================================
+             INTRODUCTION
+             ===================================================== -->
+
+        <section
+            class="intro section"
+            aria-labelledby="intro-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        What we do
+                    </p>
+
+                    <h2 id="intro-heading">
+                        Building the Future of Tech
+                    </h2>
+
+                    <p class="section-description">
+                        We are a team of software engineers focused
+                        on creating useful, accessible, and reliable
+                        digital experiences from front to back.
+                    </p>
+
+                </header>
+
+                <!-- =================================================
+                     TEAM
+                     ================================================= -->
+
+                <div class="team-grid">
+
+                    <!-- =================================================
+                         KELLY
+                         ================================================= -->
+
+                    <article class="team-member">
+
+                        <figure class="team-member-image">
+
+                            <img
+                                src="images/image1 (1).jpg"
+                                alt="Portrait of Kelly Kevin"
+                                width="800"
+                                height="800"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </figure>
+
+                        <div class="team-member-content">
+
+                            <p class="person-label">
+                                Front-End Specialist
+                            </p>
+
+                            <h3>
+                                Kelly Kevin
+                            </h3>
+
+                            <p>
+                                Passionate about creating engaging
+                                user experiences through clean code,
+                                thoughtful interfaces, and modern
+                                web technologies.
+                            </p>
+
+                            <a
+                                href="about.html"
+                                class="text-link"
+                            >
+                                <span>
+                                    Learn more about Kelly
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- =================================================
+                         RICHES
+                         ================================================= -->
+
+                    <article class="team-member">
+
+                        <figure class="team-member-image">
+
+                            <img
+                                src="images/riches.webp"
+                                alt="Portrait of Riches"
+                                width="800"
+                                height="800"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </figure>
+
+                        <div class="team-member-content">
+
+                            <p class="person-label">
+                                Back-End Architect
+                            </p>
+
+                            <h3>
+                                Riches
+                            </h3>
+
+                            <p>
+                                Focused on server-side engineering,
+                                database architecture, performance,
+                                and building robust and scalable
+                                software systems.
+                            </p>
+
+                            <a
+                                href="about.html"
+                                class="text-link"
+                            >
+                                <span>
+                                    Learn more about Riches
+                                </span>
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- =====================================================
+             WHAT WE BUILD
+             ===================================================== -->
+
+        <section
+            class="capabilities section"
+            aria-labelledby="capabilities-heading"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="section-eyebrow">
+                        Our capabilities
+                    </p>
+
+                    <h2 id="capabilities-heading">
+                        From Idea to Implementation
+                    </h2>
+
+                    <p class="section-description">
+                        We approach software as a complete system,
+                        connecting interface, application logic,
+                        data, and infrastructure.
+                    </p>
+
+                </header>
+
+                <div class="capabilities-grid">
+
+                    <article class="capability-card">
+
+                        <div class="capability-icon">
+                            <i
+                                class="fa-solid fa-display"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Responsive and accessible interfaces
+                            designed for modern browsers and devices.
+                        </p>
+
+                    </article>
+
+                    <article class="capability-card">
+
+                        <div class="capability-icon">
+                            <i
+                                class="fa-solid fa-server"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h3>
+                            Backend Engineering
+                        </h3>
+
+                        <p>
+                            APIs, application logic, services, and
+                            backend systems designed for reliability
+                            and growth.
+                        </p>
+
+                    </article>
+
+                    <article class="capability-card">
+
+                        <div class="capability-icon">
+                            <i
+                                class="fa-solid fa-database"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h3>
+                            Data & Databases
+                        </h3>
+
+                        <p>
+                            Structured data systems and database
+                            solutions designed around application
+                            requirements.
+                        </p>
+
+                    </article>
+
+                    <article class="capability-card">
+
+                        <div class="capability-icon">
+                            <i
+                                class="fa-solid fa-layer-group"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <h3>
+                            Full-Stack Systems
+                        </h3>
+
+                        <p>
+                            End-to-end applications that connect
+                            user interfaces, backend services, and
+                            data into one coherent system.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+             PROJECT CTA
+             ===================================================== -->
+
+        <section
+            class="project-cta section"
+            aria-labelledby="project-cta-heading"
+        >
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <p class="section-eyebrow">
+                        Selected work
+                    </p>
+
+                    <h2 id="project-cta-heading">
+                        Explore What We've Built
+                    </h2>
+
+                    <p>
+                        Explore our projects, experiments, and
+                        applications across different areas of
+                        software development.
+                    </p>
+
+                    <a
+                        href="projects.html"
+                        class="button button-primary"
+                    >
+                        <span>
+                            View Projects
+                        </span>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
-    <footer>
-        <p>&copy; 2024 Riches & Kelly. All rights reserved.</p>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy;
+                <span id="currentYear">
+                    2026
+                </span>
+                Riches & Kelly.
+                <span>
+                    All rights reserved.
+                </span>
+            </p>
+
+        </div>
+
     </footer>
-    <!-- Include SweetAlert JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="scripts.js"></script>
+
+    <!-- =========================================================
+         SCRIPTS
+         ========================================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+        defer
+    ></script>
+
+    <script
+        src="scripts.js"
+        defer
+    ></script>
+
 </body>
 
 </html>
